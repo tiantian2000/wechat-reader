@@ -1,0 +1,30 @@
+<!--pages/posts/posts.wxml-->
+<wxs src="../../utils/utils.wxs" module="utils" />
+<view class="wrapper">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banner}}" wx:key="{{code}}">
+      <swiper-item>
+        <image src="{{item.newImg}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <block wx:for="{{list}}" wx:key="{{code}}">
+    <view  class="post-container">
+      <view class="author">
+        <image src="../../images/avatar/{{utils.random(5)}}.png" class="avatar"></image>
+        <text class="date">{{date}}</text>
+      </view>
+      <text class="title" bindtap='detail' data-id="{{item.id}}">{{item.title}}</text>
+      <image src="{{item.image}}" class="title-image" bindtap='detail' data-id="{{item.id}}"></image>
+      <!--<text class="content">中国足协发布了一则《关于自2018年10月起调整中超、中甲联赛，足协杯赛“U-23球员政策”的通知》（以下简称《通知》）。相比于2年前新政的出台和今年亚运会前新政的调整，《通知》的发布并未引起轩然大波，仿佛大家对于足协的公告已经见惯不怪了。</text>-->
+      <view class="post-like">
+        <image src="../../images/icon/chat.png" class="post-like-img"></image>
+        <text class="post-like-title">{{utils.random(1000)}}</text>
+        <image src="../../images/icon/view.png" class="post-like-img"></image>
+        <text class="post-like-title">{{utils.random(1000)}}</text>
+      </view>
+    </view>
+  </block>
+  
+</view>

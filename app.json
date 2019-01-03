@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/posts/posts",
+    "pages/movies/movies",
+    "pages/posts/detail/detail",
+    "pages/posts/static-detail/static-detail",
+    "pages/logs/logs",
+    "pages/movies/movie-list/movie-list",
+    "pages/movies/movie-detail/movie-detail",
+    "pages/music/music",
+    "pages/music/rank/rank",
+    "pages/music/player/player"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5e88b7",
+    "navigationBarTitleText": "光影年华",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/posts/posts",
+        "text": "阅读",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "音乐",
+        "iconPath": "images/tab/tb2-off.png",
+        "selectedIconPath": "images/tab/tb2-on.png"
+      }
+    ]
+  }
+}

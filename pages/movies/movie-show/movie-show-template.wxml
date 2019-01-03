@@ -1,0 +1,11 @@
+<!-- 显示电影模板 -->
+<wxs src="../../../utils/utils.wxs" module="utils" />
+<import src="../../stars/stars-template.wxml" />
+<template name="movieTemplate">
+  <view class="movie-container" catchtap='onMovieTap'
+  data-id="{{id}}" data-img="{{images.large}}">
+    <image src="{{images.small}}" class="movie-img"></image>
+    <text class="movie-title">{{utils.substring(title,0,7)}}</text>
+    <template is="starsTemplate" data="{{stars:utils.convertToStarsArray(rating.stars),score:rating.average}}"/>
+  </view>
+</template>

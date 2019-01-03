@@ -1,0 +1,55 @@
+/* pages/location/splash/splash.wxss */
+
+.index-container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.containert-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+.userinfo {
+  position: absolute; left: 50%; top: 30%;
+  transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+  text-align: center;
+}
+
+.avatar{
+    width:200rpx;
+    height:200rpx;
+    margin-top:160rpx;
+    border-radius: 50%;
+}
+
+.motto{
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+  color: #fff;
+}
+
+.journey-container{
+  border: 1px solid #fff;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 10px;
+  text-align:center;
+  position: absolute; 
+  left: 50%; 
+  top: 60%;
+  transform: translate(-50%, -50%);    /* 50%为自身尺寸的一半 */
+}
+
+.journey{
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+  color: #fff;
+}
+

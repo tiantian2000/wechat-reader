@@ -1,0 +1,29 @@
+<!--pages/music/player/player.wxml-->
+<view class="header">
+  <view class="cover">
+    <image class="img" animation="{{animation}}" src="{{song.img}}" />
+    <image catchtap="onMusicTap" class="audio" src="{{isPlayer? '/images/music/pause.png': '/images/music/play.png'}}"></image>
+  </view>
+
+  <view class="clric">
+    <scroll-view style="height:500rpx" scroll-y="true" scroll-x="false">
+      <block wx:for="{{currentLyric}}" wx:key="{{code}}">
+        <view class="line">
+          <text>{{item.c}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <!--时间轴-->
+  <view class="songTimeBar">
+    <text class='play-line-time1'>{{now_time?now_time:'00:00'}}</text>
+    <slider class='play-line-slider' bindchange="listenerSlider" block-size="15" value="{{slider_value}}" activeColor="#1a94e1" backgroundColor="#d5d5d5" />
+    <text class='play-line-time2'>{{totalTime}}</text>
+  </view>
+
+  <view class="blur_bj">
+    <image src="{{song.img}}" mode="widthFix"></image>
+  </view>
+  <view class="blur_bj_gray"></view>
+
+</view>

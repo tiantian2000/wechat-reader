@@ -1,0 +1,30 @@
+<!--pages/music/music.wxml-->
+<wxs src="../../utils/utils.wxs" module="utils" />
+<view>
+  <view class="search">
+    <icon class="icon-img" type="search" size="13" color="#405f80" />
+    <input type="text" placeholder='搜索歌曲、音乐人' placeholder-class='placeholder' bindfocus='onBindFocus' bindchange='onBindChange' value="{{searchText}}" />
+    <image wx:if="{{searchShow}}" class="cancel-img" src="/images/icon/xx.png" catchtap='onCancelSearch' />
+  </view>
+  <view class="rank-container" wx:if="{{containerShow}}">
+    <block wx:for="{{rankList}}" wx:key="{{code}}">
+      <view class="rank" catchtap='onTap' data-id="{{item.rankid}}">
+        <image class="img" src="{{utils.replace(item.imgurl,'{size}', '400')}}"></image>
+        <text class="name" >{{item.rankname}}</text>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{searchShow}}" class="search-song">
+  <scroll-view style="height:1300rpx" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower">
+    <block wx:for="{{searchSongs}}" wx:key="{{code}}">
+      <view class="song {{item.isPlay==true?'cur':''}}"  catchtap='playMusic' data-hash="{{item.hash}}" data-index="{{index}}">
+        <text class="index-rank">{{index+1}}</text>
+        <text class="name">{{item.filename}}</text>
+        <image wx:if="{{!item.isPlay}}" class="img" src="../../images/music/music-start.png" catchtap='onPlayer' data-hash="{{item.hash}}"></image>
+        <image wx:else class="img" src="../../images/music/music-stop.png"></image>
+      </view>
+      <view class="hr"></view>
+    </block>
+    </scroll-view>
+   </view>
+</view>

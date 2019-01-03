@@ -1,0 +1,21 @@
+<!--pages/music/rank/rank.wxml-->
+<wxs src="../../../utils/utils.wxs" module="utils" />
+<view class="rank">
+  <view class="header">
+    <image class="img" src="{{info}}" mode='scaleToFill'></image>
+    <text class="update">上次更新时间 : {{update}}</text>
+  </view>
+  <view>
+  <scroll-view style="height:1300rpx" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower">
+    <block wx:for="{{records}}" wx:key="{{code}}" wx:for-index="index">
+      <view class="song {{item.isPlay==true?'cur':''}}"  catchtap='playMusic' data-hash="{{item.hash}}" data-index="{{index}}">
+        <text class="{{utils.rank(index)}}">{{index+1}}</text>
+        <text class="name">{{item.filename}}</text>
+        <image wx:if="{{!item.isPlay}}" class="img" src="../../../images/music/music-start.png" catchtap='onPlayer' data-hash="{{item.hash}}"></image>
+        <image wx:else class="img" src="../../../images/music/music-stop.png"></image>
+      </view>
+      <view class="hr"></view>
+    </block>
+  </scroll-view>
+  </view>
+</view>

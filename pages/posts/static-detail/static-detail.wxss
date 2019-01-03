@@ -1,0 +1,97 @@
+/* pages/posts/static-detail/static-detail.wxss */
+.detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-container .header-image {
+  width: 100%;
+  height: 460rpx;
+}
+
+.detail-container .audio {
+  width: 102rpx;
+  height: 110rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -51rpx;
+  top: 180rpx;
+  opacity: 0.6;
+}
+
+.detail-container .author-date {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.detail-container .author-date .avatar{
+  width: 64rpx;
+  height: 64rpx;
+  vertical-align: middle;
+}
+
+.detail-container .author-date .author{
+  font-size: 30rpx;
+  font-weight: 300;
+  margin-left:20rpx;
+  vertical-align: middle;  
+  line-height: 64rpx;
+  color: #666;
+}
+
+.detail-container .author-date .const-text{
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 30rpx;
+  vertical-align: middle;
+  line-height: 64rpx;
+}
+
+.detail-container .title {
+  margin-left: 40rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-top: 30rpx;
+  letter-spacing: 2rpx;
+  color: #4b556c;
+}
+
+.detail-container .tool {
+  margin-top: 20rpx;
+}
+
+.detail-container .tool .cyrcle-img {
+  float: right;
+  margin-right: 40rpx;
+  vertical-align: middle;
+}
+
+.detail-container .tool .cyrcle-img .avatar{
+  margin-left: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.detail-container .tool .horizon {
+  width: 90%;
+  height: 1px;
+  background-color: #e5e5e5;
+  vertical-align: middle;
+  position: relative;
+  top: 46rpx;
+  margin: 0 auto;
+  z-index: -99;
+}
+
+.detail-container .detail {
+  color: #666;
+  font-family: MicroSoft Yahei;
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  margin-top: 20rp;
+  margin-right: 30rpx;
+  line-height: 44rpx;
+  letter-spacing: 2px;
+}

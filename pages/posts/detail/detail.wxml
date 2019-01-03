@@ -1,0 +1,2 @@
+<!--pages/posts/detail/detail.wxml-->
+<rich-text nodes="{{record.body}}" ></rich-text>

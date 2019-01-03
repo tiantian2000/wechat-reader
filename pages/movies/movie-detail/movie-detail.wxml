@@ -1,0 +1,88 @@
+<!--pages/movies/movie-detail/movie-detail.wxml-->
+<wxs src="../../../utils/utils.wxs" module="utils" />
+<import src="../../stars/stars-template.wxml" />
+<view class="detail-container">
+  <image class="head-img" src="{{record.movieImg}}" mode="aspectFill"></image>
+  <view class="head-img-hover">
+    <text class="main-title">{{record.title}}</text>
+    <text class="sub-title">{{record.country + " · " + record.year}}</text>
+    <view class="like">
+      <text class="highlight-font">{{record.wishCount}}</text>
+      <text class="plain-font">人喜欢</text>
+      <text class="highlight-font">{{record.commentCount}}</text>
+      <text class="plain-font">条评论</text>
+    </view>
+  </view>
+  <image class="movie-img" src="{{record.movieImg}}"></image>
+  <view class="summary">
+    <view class="original-title">
+      <text>{{record.originalTitle}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">评分</text>
+      <template is="starsTemplate" data="{{stars:record.stars,score:record.score}}" />
+    </view>
+    <view class="flex-row">
+      <text class="mark">导演</text>
+      <text>{{record.director.name}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">主演</text>
+      <text>{{record.casts}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">类型</text>
+      <text>{{record.generes}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">语言</text>
+      <text>{{record.languages}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">上映</text>
+      <text>{{record.pubDates}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">片长</text>
+      <text>{{record.durations}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">又名</text>
+      <text>{{record.aka}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="description">
+    <text class="mark">剧情简介</text>
+    <text class="content">{{record.summary}}</text>
+  </view>
+  <view class="hr"></view>
+  <view class="cast">
+    <text class="mark">主演</text>
+    <scroll-view class="scroll-cast" scroll-x="true">
+      <block wx:for="{{record.castsInfo}}">
+        <view class="cast-content">
+          <image class="cast-img" src="{{item.img}}"></image>
+          <text class="cast-name">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="review">
+    <text class="mark">热门评论</text>
+    <block wx:for="{{record.popular}}">
+      <view class="desc">
+        <view class="name">
+          <!--<img src="http://img7.doubanio.com/icon/u167392628-4.jpg" />-->
+          <text class="avatar-name">{{item.author.name}}</text>
+          <view class="view"> <template is="starsTemplate" data="{{stars:utils.convertValToStarsArray(item.rating.value)}}"/></view>
+          <text class="date">{{item.created_at}}</text>
+          <text class="count">{{item.useful_count}} 有用</text>
+        </view>
+        <view class="content">{{item.content}}</view>
+        <view class="hr"></view>
+      </view>
+    </block>
+  </view>
+
+</view>

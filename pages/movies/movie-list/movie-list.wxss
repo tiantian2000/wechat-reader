@@ -1,0 +1,12 @@
+/* pages/movies/movie-list/movie-list.wxss */
+@import '../movie-show/movie-show-template.wxss';
+.grid-container {
+  margin: 40rpx 0;
+  margin-left: 10rpx; 
+}
+
+.movie-show {
+  float: left;
+  margin-bottom: 20rpx;
+  padding: 0 4px;
+}

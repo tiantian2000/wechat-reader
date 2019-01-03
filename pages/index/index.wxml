@@ -1,0 +1,13 @@
+<view class='index-container'>
+  <image class='containert-img' src='{{imageUrl}}' mode='aspectFill'></image>
+  <view class="userinfo">
+    <view>
+      <image bindtap="bindViewTap" class="avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="motto">{{userInfo.nickName}}</view>
+  </view>
+
+  <view class='journey-container' bindtap='onBindTap'>
+    <text class='journey'>打开你的干货</text>
+  </view>
+</view>

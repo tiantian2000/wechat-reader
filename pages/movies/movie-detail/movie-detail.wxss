@@ -1,0 +1,220 @@
+/* pages/movies/movie-detail/movie-detail.wxss */
+@import '../../stars/stars-template.wxss';
+.detail-container {
+  display: flex;
+  flex-direction: column
+}
+
+.detail-container .head-img {
+  width: 100%;
+  height: 320rpx;
+  -webkit-filter:blur(15px) 
+}
+
+.detail-container .head-img-hover {
+  width: 100%;
+  height: 320rpx;
+  position:absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-container .head-img-hover .main-title {
+  font-size: 19px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  letter-spacing: 2px;
+}
+
+.detail-container .head-img-hover .sub-title {
+  font-size: 28rpx;
+  color: #fff;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+}
+
+.detail-container .head-img-hover .like {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+}
+
+.detail-container .head-img-hover .like .highlight-font {
+  color: #f21146;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+
+.detail-container .head-img-hover .like .plain-font {
+  color: #666;
+  font-size: 22rpx;
+  margin-right: 30rpx;
+}
+
+.detail-container .movie-img {
+  height: 238rpx;
+  width: 175rpx;
+  position: absolute;
+  top: 160rpx;
+  right: 30rpx;
+}
+
+.detail-container .summary {
+  margin-left: 40rpx;
+  margin-top: 60rpx;
+  color: #777;
+  font-size: 28rpx;
+}
+
+.detail-container .summary .original-title {
+  color: #1f3463;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+  font-size: 32rpx;
+}
+
+.detail-container .summary .flex-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+}
+
+.detail-container .summary .mark {
+  margin-right: 30rpx;
+  white-space: nowrap;
+  color: #999;
+  
+}
+
+.detail-container .hr {
+  margin-top: 45rpx;
+  height: 1px;
+  width: 750rpx;
+  background-color: #d9d9d9;
+}
+
+.detail-container .description {
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+  font-size: 26rpx;
+}
+
+.detail-container .description .mark {
+   color: #999;
+}
+.detail-container .description .content {
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+  line-height: 40rpx;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.detail-container .cast {
+  margin-left: 40rpx;
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;  
+}
+.detail-container .cast .mark {
+  margin-bottom: 40rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.detail-container .cast .scroll-cast {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.detail-container .cast .cast-content {
+  margin-bottom: 50rpx;
+  margin-right: 40rpx;
+  display: inline-flex;
+  flex-direction: column;
+  width: 170rpx;
+  text-align: center;
+  white-space: normal;
+}
+
+.detail-container .cast .cast-content  .cast-img {
+  width: 170rpx;
+  height: 210rpx;
+}
+
+.detail-container .cast .cast-content  .cast-name {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.detail-container .review {
+  margin-left: 40rpx;
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;  
+}
+
+.detail-container .review{
+  font-size: 26rpx;
+}
+
+.detail-container .review .mark {
+  margin-bottom: 40rpx;  
+  color: #999;
+}
+
+.detail-container .review .desc .name {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail-container .review .desc .name .avatar-name{
+  color: #1d7ad9;
+}
+
+.detail-container .review .desc .name .view {
+  margin-right: 20rpx;
+  color: #999;
+}
+
+.detail-container .review .desc .name .date {
+  margin-top: 6rpx;
+  margin-right:auto;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.detail-container .review .desc .name .count {
+  margin-top: 6rpx;
+  margin-right: 40rpx;
+  font-size: 22rpx;
+  color: #1d7ad9; 
+}
+
+.detail-container .review .desc .content {
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+  line-height: 40rpx;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.detail-container .review .hr {
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  height: 1px;
+  width: 95%;
+  background-color: #d9d9d9;
+}
+
+
+
+

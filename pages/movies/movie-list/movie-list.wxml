@@ -1,0 +1,11 @@
+<!--pages/movies/movie-list/movie-list.wxml-->
+<import src="../movie-show/movie-show-template.wxml" />
+<view class="grid-container">
+  <scroll-view style="height:1300rpx" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower" bindscrolltoupper="refresh" >
+    <block wx:for="{{records}}" wx:key="{{code}}">
+      <view class="movie-show">
+        <template is="movieTemplate" data="{{...item}}" />
+      </view>
+    </block>
+  </scroll-view>
+</view>

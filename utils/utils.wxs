@@ -1,0 +1,61 @@
+var random = function(e) {
+  return Math.ceil(Math.random()*e);
+}
+
+function convertToStarsArray(stars){
+  var num = stars.toString().substring(0,1);
+  array = [];
+  for(var i=1;i<=5;i++){
+    if(i<=num){
+      array.push(1);
+    }else{
+      array.push(0);
+    }
+  }
+  //console.log(array)
+  return array;
+}
+
+function convertValToStarsArray(val) {
+  //console.log('评论', val)
+  var array = [0, 0, 0, 0, 0]
+  for (var i = 0; i < val; i++) {
+    array[i] = 1;
+  }
+  //console.log(array)
+  return array;
+}
+
+
+function substring(str,start,end) {
+  return str.substring(start,end);
+}
+
+function replace(str,old,news){
+  return str.replace(old,news)
+}
+
+var rank = function (index) {
+  switch (index) {
+    case 0:
+      return 'first-rank';
+      break;
+    case 1:
+      return 'second-rank';
+      break;
+    case 2:
+      return 'third-rank';
+      break;
+    default:
+      return 'index-rank'        
+  }
+};
+
+module.exports = {
+  random: random,
+  convertToStarsArray: convertToStarsArray,
+  substring: substring,
+  convertValToStarsArray: convertValToStarsArray,
+  replace: replace,
+  rank: rank
+}

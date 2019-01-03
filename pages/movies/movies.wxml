@@ -1,0 +1,68 @@
+<!--pages/movies/movies.wxml-->
+<import src="movie-show/movie-show-template.wxml" />
+<view class="search">
+  <icon class="icon-img" type="search" size="13" color="#405f80"/>
+  <input type="text" placeholder='搜索电影、电视剧、综艺、影人' placeholder-class='placeholder' bindfocus='onBindFocus'
+ bindchange='onBindChange' value="{{searchText}}"/>
+  <image wx:if="{{searchShow}}" class="cancel-img" src="/images/icon/xx.png" catchtap='onCancelSearch'/>
+</view>
+<view class="list-container" wx:if="{{containerShow}}">
+  
+  <view class="movie-list-container">
+    <view class="movie-header">
+      <text class="title">正在热映</text>
+      <view class="more">
+        <text class="more-text" bindtap='more' data-type="0">更多</text>
+        <image src="/images/icon/arrow-right.png" class="more-img" bindtap='more' data-type="0"></image>
+      </view>
+    </view>
+    <view class="movie-detail">
+      <block wx:for="{{inMovies}}" wx:key="{{code}}">
+        <view class="movie-show">
+          <template is="movieTemplate" data="{{...item}}"/>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="movie-list-container">
+    <view class="movie-header">
+      <text class="title">即将上映</text>
+      <view class="more">
+        <text class="more-text" bindtap='more' data-type="1">更多</text>
+        <image src="/images/icon/arrow-right.png" class="more-img" bindtap='more' data-type="1"></image>
+      </view>
+    </view>
+    <view class="movie-detail">
+      <block wx:for="{{comingMovies}}" wx:for-index="index" wx:for-item="item">
+        <view class="movie-show">
+          <template is="movieTemplate" data="{{...item}}"/>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="movie-list-container">
+    <view class="movie-header">
+      <text class="title">Top200</text>
+      <view class="more">
+        <text class="more-text" bindtap='more' data-type="2">更多</text>
+        <image src="/images/icon/arrow-right.png" class="more-img" bindtap='more' data-type="2"></image>
+      </view>
+    </view>
+    <view class="movie-detail">
+      <block wx:for="{{topMovies}}" wx:for-index="index" wx:for-item="item">
+        <view class="movie-show">
+          <template is="movieTemplate" data="{{...item}}"/>
+        </view>
+      </block>
+    </view>
+  </view>
+ </view>
+  <view wx:if="{{searchShow}}">
+    <view class="grid-container"> 
+      <block wx:for="{{searchMovies}}" wx:key="{{code}}">
+        <view class="movie-show">
+          <template is="movieTemplate" data="{{...item}}" />
+        </view>
+      </block>
+    </view>
+  </view>
