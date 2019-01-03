@@ -1,15 +1,15 @@
 <h2>项目介绍</h2>
 
-基于Shiro的权限管理系统
+基于微信小程序开发的APP,数据来自知乎新闻、豆瓣电影、酷狗音乐
 
 <h2>技术栈</h2>
-Springboot+Shiro+Mybatis+Thymeleaf
+微信小程序
 
 
 <h2>项目截图<h2>
-<img src="https://github.com/tiantian2000/shiro-perm/blob/gh-pages/示例.jpg"/>
-<img src="https://github.com/tiantian2000/shiro-perm/blob/gh-pages/示例1.jpg"/>
-
+<img src="https://github.com/tiantian2000/wechat-reader/blob/master/示例.jpg"/>
+<img src="https://github.com/tiantian2000/wechat-reader/blob/master/示例1.jpg"/>
+<img src="https://github.com/tiantian2000/wechat-reader/blob/master/示例2.jpg"/>
 
 
 ### 说明
